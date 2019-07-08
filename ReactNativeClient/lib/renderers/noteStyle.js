@@ -155,8 +155,9 @@ module.exports = function(style, options) {
 			padding-right: .2em;
 			padding-left: .2em;
 			border-radius: .25em;
-			color: ${style.htmlCodeColor};
-			font-size: ${style.htmlCodeFontSize};
+			color: ` + style.htmlCodeColor + `;
+			font-size: ` + style.htmlCodeFontSize + `;
+			font-family: 'SF Mono';
 		}
 
 		.highlighted-keyword {

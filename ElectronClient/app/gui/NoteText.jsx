@@ -1827,7 +1827,7 @@ class NoteTextComponent extends React.Component {
 
 		const titleBarStyle = {
 			width: innerWidth - rootStyle.paddingLeft,
-			height: 30,
+			height: 36,
 			boxSizing: 'border-box',
 			marginTop: 10,
 			marginBottom: 0,
@@ -1964,10 +1964,10 @@ class NoteTextComponent extends React.Component {
 		const toolbarItems = this.createToolbarItems(note);
 
 		const toolbar = <Toolbar style={toolbarStyle} items={toolbarItems} />;
-
 		const titleEditor = (
 			<input
 				type="text"
+				className="note-title-editor"
 				ref={elem => {
 					this.titleField_ = elem;
 				}}
@@ -1980,9 +1980,7 @@ class NoteTextComponent extends React.Component {
 				placeholder={this.props.newNote ? _('Creating new %s...', isTodo ? _('to-do') : _('note')) : ''}
 			/>
 		);
-
 		const tagList = !NOTE_TAG_BAR_FEATURE_ENABLED ? null : <TagList style={tagStyle} items={this.state.noteTags} />;
-
 		const titleBarMenuButton = (
 			<IconButton
 				style={{
@@ -1995,9 +1993,7 @@ class NoteTextComponent extends React.Component {
 				}}
 			/>
 		);
-
-		const titleBarDate = <span style={Object.assign({}, theme.textStyle, { color: theme.colorFaded })}>{time.formatMsToLocal(note.user_updated_time)}</span>;
-
+		const titleBarDate = <span style={Object.assign({}, theme.textStyle, { color: theme.colorFaded })} className="title-bar-date">{time.formatMsToLocal(note.user_updated_time)}</span>;
 		const viewer = <NoteTextViewer ref={this.webviewRef_} viewerStyle={viewerStyle} onDomReady={this.webview_domReady} onIpcMessage={this.webview_ipcMessage} />;
 
 		const editorRootStyle = Object.assign({}, editorStyle);
@@ -2042,7 +2038,7 @@ class NoteTextComponent extends React.Component {
 
 		return (
 			<div style={rootStyle} onDrop={this.onDrop_}>
-				<div style={titleBarStyle}>
+				<div className="title-bar-style" style={titleBarStyle}>
 					{titleEditor}
 					{titleBarDate}
 					{false ? titleBarMenuButton : null}

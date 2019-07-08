@@ -6,15 +6,21 @@ const checkboxStyle = `
 	   nested lists. Make sure this value matches the UL margin. */
 
 	#rendered-md > ul > li.md-checkbox {
-		margin-left: -1.7em;
 	}
-
+	
 	li.md-checkbox {
 		list-style-type: none;
+		margin-bottom: .8em;
 	}
-
+	
 	li.md-checkbox input[type=checkbox] {
-		margin-right: 1em;
+		margin-right: .7em;
+		margin-top: .7em;
+		margin-left: -1.7em;
+	}
+	
+	li.md-checkbox label {
+		cursor: pointer;
 	}
 `;
 

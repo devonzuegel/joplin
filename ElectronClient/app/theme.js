@@ -4,7 +4,18 @@ const Setting = require('lib/models/Setting.js');
 // i.e. should not be used for colors
 const globalStyle = {
 	fontSize: 12,
-	fontFamily: 'sans-serif',
+	fontFamily: [
+		'-apple-system',
+		'BlinkMacSystemFont',
+		'Segoe UI',
+		'Helvetica',
+		'Avenir',
+		'Arial',
+		'sans-serif',
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol'
+	].join(),
 	margin: 15, // No text and no interactive component should be within this margin
 	itemMarginTop: 10,
 	itemMarginBottom: 10,
@@ -85,11 +96,11 @@ const lightStyle = {
 	selectedColor: '#e5e5e5',
 	urlColor: '#155BDA',
 
-	backgroundColor2: '#162B3D',
+	backgroundColor2: "#ffffff",
 	depthColor: 'rgb(100, 182, 253, OPACITY)',
-	color2: '#f5f5f5',
-	selectedColor2: '#0269C2',
-	colorError2: '#ff6c6c',
+	color2: "#222222",
+	selectedColor2: "rgba(181, 213, 255, 1)",
+	colorError2: "#ff6c6c",
 
 	raisedBackgroundColor: '#e5e5e5',
 	raisedColor: '#222222',
