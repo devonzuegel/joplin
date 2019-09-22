@@ -7,7 +7,7 @@ module.exports = function(style, options) {
 		b,strong{font-weight:bolder}small{font-size:80%}img{border-style:none}
 	`;
 
-	const fontFamily = '\'San Francisco Text\', \'Avenir\', \'Arial\', sans-serif';
+	const fontFamily = '\'SF Pro Text\', \'Avenir\', \'Arial\', sans-serif';
 
 	const css =
 		`
