@@ -3,11 +3,11 @@ module.exports = function(style, options) {
 	const normalizeCss = `
 		html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
 		article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}
-		pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}
+		pre{font-family:'SF Mono',monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}
 		b,strong{font-weight:bolder}small{font-size:80%}img{border-style:none}
 	`;
 
-	const fontFamily = '\'Avenir\', \'Arial\', sans-serif';
+	const fontFamily = '\'San Francisco Text\', \'Avenir\', \'Arial\', sans-serif';
 
 	const css =
 		`
@@ -43,21 +43,6 @@ module.exports = function(style, options) {
 			background: rgba(100, 100, 100, 0.7); 
 		}
 
-		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
-		#rendered-md h1:first-child,
-		#rendered-md h2:first-child,
-		#rendered-md h3:first-child,
-		#rendered-md h4:first-child,
-		#rendered-md ul:first-child,
-		#rendered-md ol:first-child,
-		#rendered-md table:first-child,
-		#rendered-md blockquote:first-child,
-		#rendered-md img:first-child,
-		#rendered-md p:first-child {
-			margin-top: 0;
-			padding-top: 0;
-		}
-		
 		p, h1, h2, h3, h4, h5, h6, ul, table {
 			margin-top: .6em;
 			margin-bottom: .65em;
@@ -155,8 +140,12 @@ module.exports = function(style, options) {
 			padding-right: .2em;
 			padding-left: .2em;
 			border-radius: .25em;
-			color: ` + style.htmlCodeColor + `;
-			font-size: ` + style.htmlCodeFontSize + `;
+			color: ${style.htmlCodeColor};
+			font-size: ${style.htmlCodeFontSize};
+			font-family: 'SF Mono';
+		}
+		
+		#rendered-md code, #rendered-md pre {
 			font-family: 'SF Mono';
 		}
 
