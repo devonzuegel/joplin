@@ -100,7 +100,7 @@ a {
 	background-color: #0465BB;
 }*/
 
-.editor-toolbar {
+.editor-toolbar.hidden {
   display: none !important;
 }
 

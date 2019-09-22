@@ -42,7 +42,7 @@ class ToolbarComponent extends React.Component {
 		}
 
 		return (
-			<div className="editor-toolbar" style={style}>
+			<div className="editor-toolbar hidden" style={style}>
 				{itemComps}
 			</div>
 		);
