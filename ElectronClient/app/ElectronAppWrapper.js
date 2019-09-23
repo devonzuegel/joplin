@@ -51,6 +51,7 @@ class ElectronAppWrapper {
 			x: windowState.x,
 			y: windowState.y,
 			width: windowState.width,
+			frame: false,
 			height: windowState.height,
 			backgroundColor: '#fff', // required to enable sub pixel rendering, can't be in css
 			webPreferences: {
